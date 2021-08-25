@@ -1,0 +1,96 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -c 31
+Relation:     student-por-comma-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R7,8-weka.filters.unsupervised.attribute.NumericToNominal-R13-weka.filters.unsupervised.attribute.NumericToNominal-R14,15-weka.filters.unsupervised.attribute.NumericToNominal-R24,25,26,27,28,29-weka.filters.unsupervised.attribute.Discretize-B12-M-1.0-R30-precision6-weka.filters.unsupervised.attribute.Remove-R31-32-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6
+Instances:    649
+Attributes:   31
+              school
+              sex
+              age
+              address
+              famsize
+              Pstatus
+              Medu
+              Fedu
+              Mjob
+              Fjob
+              reason
+              guardian
+              traveltime
+              studytime
+              failures
+              schoolsup
+              famsup
+              paid
+              activities
+              nursery
+              higher
+              internet
+              romantic
+              famrel
+              freetime
+              goout
+              Dalc
+              Walc
+              health
+              absences
+              G3
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (65 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 93
+
+Size of set of large itemsets L(2): 978
+
+Size of set of large itemsets L(3): 4402
+
+Size of set of large itemsets L(4): 10875
+
+Size of set of large itemsets L(5): 16024
+
+Size of set of large itemsets L(6): 14494
+
+Size of set of large itemsets L(7): 7890
+
+Size of set of large itemsets L(8): 2465
+
+Size of set of large itemsets L(9): 359
+
+Size of set of large itemsets L(10): 13
+
+Best rules found:
+
+  1. school=GP famsize=GT3 Pstatus=T Fjob=other higher=yes romantic=no 99 ==> G3='(9.5-14.25]' 81    conf:(0.82)
+  2. school=GP famsize=GT3 Pstatus=T Fjob=other paid=no higher=yes romantic=no 92 ==> G3='(9.5-14.25]' 75    conf:(0.82)
+  3. Medu=2 Fedu=2 failures=0 paid=no 81 ==> G3='(9.5-14.25]' 66    conf:(0.81)
+  4. age=15 Pstatus=T failures=0 higher=yes 90 ==> G3='(9.5-14.25]' 73    conf:(0.81)
+  5. school=GP address=U Fjob=other health=5 84 ==> G3='(9.5-14.25]' 68    conf:(0.81)
+  6. famsize=GT3 Fjob=other failures=0 Dalc=1 Walc=1 84 ==> G3='(9.5-14.25]' 68    conf:(0.81)
+  7. age=15 Pstatus=T failures=0 paid=no higher=yes 83 ==> G3='(9.5-14.25]' 67    conf:(0.81)
+  8. school=GP famsize=GT3 Pstatus=T Fjob=other failures=0 higher=yes romantic=no 93 ==> G3='(9.5-14.25]' 75    conf:(0.81)
+  9. sex=M Pstatus=T Fjob=other paid=no romantic=no 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 10. sex=M Pstatus=T Fjob=other higher=yes romantic=no 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 11. school=GP sex=M Pstatus=T Fjob=other schoolsup=no higher=yes 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 12. school=GP Pstatus=T studytime=2 paid=no internet=yes romantic=no 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 13. school=GP Pstatus=T studytime=2 higher=yes internet=yes romantic=no 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 14. famsize=GT3 Fjob=other failures=0 higher=yes Dalc=1 Walc=1 82 ==> G3='(9.5-14.25]' 66    conf:(0.8)
+ 15. school=GP Pstatus=T studytime=2 internet=yes romantic=no 87 ==> G3='(9.5-14.25]' 70    conf:(0.8)
+ 16. school=GP famsize=GT3 Pstatus=T Fjob=other failures=0 paid=no higher=yes romantic=no 87 ==> G3='(9.5-14.25]' 70    conf:(0.8)
+ 17. school=GP famsize=GT3 Pstatus=T Fjob=other romantic=no 107 ==> G3='(9.5-14.25]' 86    conf:(0.8)
+ 18. Medu=2 reason=course paid=no 81 ==> G3='(9.5-14.25]' 65    conf:(0.8)
+ 19. Medu=2 Fedu=2 failures=0 86 ==> G3='(9.5-14.25]' 69    conf:(0.8)
+ 20. school=GP Fjob=other higher=yes health=5 86 ==> G3='(9.5-14.25]' 69    conf:(0.8)
+ 21. school=GP famsize=GT3 Fjob=other higher=yes romantic=no 106 ==> G3='(9.5-14.25]' 85    conf:(0.8)
+ 22. school=GP famsize=GT3 Pstatus=T Fjob=other paid=no romantic=no 100 ==> G3='(9.5-14.25]' 80    conf:(0.8)
+ 23. age=15 failures=0 internet=yes 85 ==> G3='(9.5-14.25]' 68    conf:(0.8)
+ 24. school=GP famsize=GT3 Pstatus=T Fjob=other schoolsup=no higher=yes romantic=no 85 ==> G3='(9.5-14.25]' 68    conf:(0.8)
+
