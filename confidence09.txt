@@ -1,0 +1,162 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     student-por-comma-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R7,8-weka.filters.unsupervised.attribute.NumericToNominal-R13-weka.filters.unsupervised.attribute.NumericToNominal-R14,15-weka.filters.unsupervised.attribute.NumericToNominal-R24,25,26,27,28,29-weka.filters.unsupervised.attribute.Discretize-B12-M-1.0-R30-precision6-weka.filters.unsupervised.attribute.Remove-R31-32-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6
+Instances:    649
+Attributes:   31
+              school
+              sex
+              age
+              address
+              famsize
+              Pstatus
+              Medu
+              Fedu
+              Mjob
+              Fjob
+              reason
+              guardian
+              traveltime
+              studytime
+              failures
+              schoolsup
+              famsup
+              paid
+              activities
+              nursery
+              higher
+              internet
+              romantic
+              famrel
+              freetime
+              goout
+              Dalc
+              Walc
+              health
+              absences
+              G3
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.55 (357 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 9
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 19
+
+Size of set of large itemsets L(2): 62
+
+Size of set of large itemsets L(3): 62
+
+Size of set of large itemsets L(4): 23
+
+Size of set of large itemsets L(5): 1
+
+Best rules found:
+
+  1. schoolsup=no Dalc=1 400 ==> paid=no 383    <conf:(0.96)> lift:(1.02) lev:(0.01) [7] conv:(1.34)
+  2. school=GP failures=0 376 ==> higher=yes 360    <conf:(0.96)> lift:(1.07) lev:(0.04) [23] conv:(2.35)
+  3. sex=F 383 ==> paid=no 366    <conf:(0.96)> lift:(1.02) lev:(0.01) [6] conv:(1.28)
+  4. address=U failures=0 392 ==> paid=no 374    <conf:(0.95)> lift:(1.02) lev:(0.01) [5] conv:(1.24)
+  5. failures=0 schoolsup=no higher=yes 455 ==> paid=no 434    <conf:(0.95)> lift:(1.01) lev:(0.01) [6] conv:(1.24)
+  6. failures=0 schoolsup=no 491 ==> paid=no 468    <conf:(0.95)> lift:(1.01) lev:(0.01) [6] conv:(1.23)
+  7. failures=0 Dalc=1 392 ==> paid=no 373    <conf:(0.95)> lift:(1.01) lev:(0.01) [4] conv:(1.18)
+  8. Pstatus=T failures=0 schoolsup=no 432 ==> paid=no 411    <conf:(0.95)> lift:(1.01) lev:(0.01) [4] conv:(1.18)
+  9. failures=0 internet=yes 428 ==> higher=yes 407    <conf:(0.95)> lift:(1.06) lev:(0.04) [24] conv:(2.07)
+ 10. failures=0 paid=no internet=yes 404 ==> higher=yes 384    <conf:(0.95)> lift:(1.06) lev:(0.04) [22] conv:(2.05)
+ 11. Pstatus=T failures=0 schoolsup=no higher=yes 402 ==> paid=no 382    <conf:(0.95)> lift:(1.01) lev:(0.01) [4] conv:(1.15)
+ 12. failures=0 schoolsup=no nursery=yes 398 ==> paid=no 378    <conf:(0.95)> lift:(1.01) lev:(0.01) [3] conv:(1.14)
+ 13. Pstatus=T failures=0 internet=yes 378 ==> higher=yes 359    <conf:(0.95)> lift:(1.06) lev:(0.03) [21] conv:(2.01)
+ 14. Dalc=1 451 ==> paid=no 428    <conf:(0.95)> lift:(1.01) lev:(0.01) [4] conv:(1.13)
+ 15. address=U failures=0 392 ==> higher=yes 372    <conf:(0.95)> lift:(1.06) lev:(0.03) [21] conv:(1.98)
+ 16. Pstatus=T Dalc=1 389 ==> paid=no 369    <conf:(0.95)> lift:(1.01) lev:(0.01) [3] conv:(1.11)
+ 17. failures=0 schoolsup=no internet=yes 386 ==> paid=no 366    <conf:(0.95)> lift:(1.01) lev:(0) [3] conv:(1.1)
+ 18. Pstatus=T failures=0 481 ==> paid=no 456    <conf:(0.95)> lift:(1.01) lev:(0.01) [3] conv:(1.11)
+ 19. failures=0 higher=yes 513 ==> paid=no 486    <conf:(0.95)> lift:(1.01) lev:(0.01) [3] conv:(1.1)
+ 20. failures=0 549 ==> paid=no 520    <conf:(0.95)> lift:(1.01) lev:(0.01) [3] conv:(1.1)
+ 21. higher=yes Dalc=1 414 ==> paid=no 392    <conf:(0.95)> lift:(1.01) lev:(0) [2] conv:(1.08)
+ 22. Pstatus=T failures=0 higher=yes 451 ==> paid=no 427    <conf:(0.95)> lift:(1.01) lev:(0) [3] conv:(1.08)
+ 23. failures=0 Dalc=1 392 ==> higher=yes 371    <conf:(0.95)> lift:(1.06) lev:(0.03) [20] conv:(1.89)
+ 24. Pstatus=T failures=0 nursery=yes 387 ==> paid=no 366    <conf:(0.95)> lift:(1.01) lev:(0) [2] conv:(1.06)
+ 25. failures=0 schoolsup=no internet=yes 386 ==> higher=yes 365    <conf:(0.95)> lift:(1.06) lev:(0.03) [20] conv:(1.87)
+ 26. address=U 452 ==> paid=no 427    <conf:(0.94)> lift:(1.01) lev:(0) [2] conv:(1.04)
+ 27. failures=0 nursery=yes higher=yes 415 ==> paid=no 392    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.04)
+ 28. Pstatus=T failures=0 internet=yes 378 ==> paid=no 357    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.03)
+ 29. failures=0 internet=yes 428 ==> paid=no 404    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.03)
+ 30. failures=0 nursery=yes 445 ==> paid=no 420    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.03)
+ 31. failures=0 higher=yes internet=yes 407 ==> paid=no 384    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.02)
+ 32. schoolsup=no 581 ==> paid=no 548    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.03)
+ 33. address=U Pstatus=T 387 ==> paid=no 365    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.01)
+ 34. address=U schoolsup=no 403 ==> paid=no 380    <conf:(0.94)> lift:(1) lev:(0) [1] conv:(1.01)
+ 35. schoolsup=no higher=yes 514 ==> paid=no 484    <conf:(0.94)> lift:(1) lev:(0) [0] conv:(1)
+ 36. guardian=mother failures=0 394 ==> paid=no 371    <conf:(0.94)> lift:(1) lev:(0) [0] conv:(0.99)
+ 37. guardian=mother failures=0 394 ==> higher=yes 371    <conf:(0.94)> lift:(1.05) lev:(0.03) [18] conv:(1.75)
+ 38. guardian=mother schoolsup=no 409 ==> paid=no 385    <conf:(0.94)> lift:(1) lev:(0) [0] conv:(0.98)
+ 39. schoolsup=no nursery=yes 465 ==> paid=no 437    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.96)
+ 40. schoolsup=no nursery=yes higher=yes 415 ==> paid=no 390    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.96)
+ 41. Pstatus=T schoolsup=no 510 ==> paid=no 479    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.96)
+ 42. address=U higher=yes 411 ==> paid=no 386    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 43. school=GP higher=yes 391 ==> paid=no 367    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.94)
+ 44. school=GP 423 ==> paid=no 397    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.94)
+ 45. Pstatus=T 569 ==> paid=no 534    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 46. higher=yes 580 ==> paid=no 544    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.94)
+ 47. G3='(9.5-14.25]' 418 ==> paid=no 392    <conf:(0.94)> lift:(1) lev:(-0) [0] conv:(0.93)
+ 48. Pstatus=T failures=0 481 ==> higher=yes 451    <conf:(0.94)> lift:(1.05) lev:(0.03) [21] conv:(1.65)
+ 49. schoolsup=no internet=yes 448 ==> paid=no 420    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.93)
+ 50. nursery=yes 521 ==> paid=no 488    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.92)
+ 51. romantic=no 410 ==> paid=no 384    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.91)
+ 52. Pstatus=T failures=0 paid=no 456 ==> higher=yes 427    <conf:(0.94)> lift:(1.05) lev:(0.03) [19] conv:(1.62)
+ 53. Pstatus=T nursery=yes 454 ==> paid=no 425    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.91)
+ 54. Pstatus=T schoolsup=no nursery=yes 407 ==> paid=no 381    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.91)
+ 55. nursery=yes higher=yes 469 ==> paid=no 439    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.91)
+ 56. Pstatus=T schoolsup=no higher=yes 453 ==> paid=no 424    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.91)
+ 57. internet=yes 498 ==> paid=no 466    <conf:(0.94)> lift:(1) lev:(-0) [-2] conv:(0.91)
+ 58. schoolsup=no higher=yes internet=yes 403 ==> paid=no 377    <conf:(0.94)> lift:(1) lev:(-0) [-1] conv:(0.9)
+ 59. Pstatus=T higher=yes 510 ==> paid=no 477    <conf:(0.94)> lift:(1) lev:(-0) [-2] conv:(0.9)
+ 60. nursery=yes internet=yes 399 ==> paid=no 373    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.89)
+ 61. failures=0 paid=no 520 ==> higher=yes 486    <conf:(0.93)> lift:(1.05) lev:(0.03) [21] conv:(1.58)
+ 62. higher=yes G3='(9.5-14.25]' 382 ==> paid=no 357    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.88)
+ 63. failures=0 549 ==> higher=yes 513    <conf:(0.93)> lift:(1.05) lev:(0.03) [22] conv:(1.58)
+ 64. Pstatus=T internet=yes 442 ==> paid=no 413    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.89)
+ 65. guardian=mother 455 ==> paid=no 425    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.88)
+ 66. Pstatus=T nursery=yes higher=yes 408 ==> paid=no 381    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.88)
+ 67. higher=yes internet=yes 451 ==> paid=no 421    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.87)
+ 68. failures=0 paid=no nursery=yes 420 ==> higher=yes 392    <conf:(0.93)> lift:(1.04) lev:(0.03) [16] conv:(1.54)
+ 69. famsize=GT3 schoolsup=no 404 ==> paid=no 377    <conf:(0.93)> lift:(0.99) lev:(-0) [-2] conv:(0.87)
+ 70. Pstatus=T failures=0 nursery=yes 387 ==> higher=yes 361    <conf:(0.93)> lift:(1.04) lev:(0.02) [15] conv:(1.52)
+ 71. failures=0 nursery=yes 445 ==> higher=yes 415    <conf:(0.93)> lift:(1.04) lev:(0.03) [17] conv:(1.53)
+ 72. Pstatus=T higher=yes internet=yes 399 ==> paid=no 372    <conf:(0.93)> lift:(0.99) lev:(-0) [-3] conv:(0.86)
+ 73. famsize=GT3 457 ==> paid=no 426    <conf:(0.93)> lift:(0.99) lev:(-0.01) [-3] conv:(0.86)
+ 74. Pstatus=T schoolsup=no internet=yes 398 ==> paid=no 371    <conf:(0.93)> lift:(0.99) lev:(-0) [-3] conv:(0.85)
+ 75. Pstatus=T guardian=mother 392 ==> paid=no 365    <conf:(0.93)> lift:(0.99) lev:(-0.01) [-3] conv:(0.84)
+ 76. famsize=GT3 schoolsup=no 404 ==> Pstatus=T 376    <conf:(0.93)> lift:(1.06) lev:(0.03) [21] conv:(1.72)
+ 77. Pstatus=T failures=0 schoolsup=no 432 ==> higher=yes 402    <conf:(0.93)> lift:(1.04) lev:(0.02) [15] conv:(1.48)
+ 78. guardian=mother higher=yes 414 ==> paid=no 385    <conf:(0.93)> lift:(0.99) lev:(-0.01) [-4] conv:(0.83)
+ 79. Pstatus=T failures=0 schoolsup=no paid=no 411 ==> higher=yes 382    <conf:(0.93)> lift:(1.04) lev:(0.02) [14] conv:(1.46)
+ 80. famsize=GT3 457 ==> Pstatus=T 424    <conf:(0.93)> lift:(1.06) lev:(0.04) [23] conv:(1.66)
+ 81. failures=0 schoolsup=no paid=no 468 ==> higher=yes 434    <conf:(0.93)> lift:(1.04) lev:(0.02) [15] conv:(1.42)
+ 82. famsize=GT3 Pstatus=T 424 ==> paid=no 393    <conf:(0.93)> lift:(0.99) lev:(-0.01) [-5] conv:(0.8)
+ 83. failures=0 schoolsup=no 491 ==> higher=yes 455    <conf:(0.93)> lift:(1.04) lev:(0.02) [16] conv:(1.41)
+ 84. famsize=GT3 higher=yes 408 ==> paid=no 378    <conf:(0.93)> lift:(0.99) lev:(-0.01) [-5] conv:(0.79)
+ 85. Pstatus=T Dalc=1 389 ==> higher=yes 360    <conf:(0.93)> lift:(1.04) lev:(0.02) [12] conv:(1.38)
+ 86. failures=0 schoolsup=no nursery=yes 398 ==> higher=yes 368    <conf:(0.92)> lift:(1.03) lev:(0.02) [12] conv:(1.36)
+ 87. school=GP paid=no 397 ==> higher=yes 367    <conf:(0.92)> lift:(1.03) lev:(0.02) [12] conv:(1.36)
+ 88. school=GP 423 ==> higher=yes 391    <conf:(0.92)> lift:(1.03) lev:(0.02) [12] conv:(1.36)
+ 89. famsize=GT3 higher=yes 408 ==> Pstatus=T 377    <conf:(0.92)> lift:(1.05) lev:(0.03) [19] conv:(1.57)
+ 90. famsize=GT3 paid=no 426 ==> Pstatus=T 393    <conf:(0.92)> lift:(1.05) lev:(0.03) [19] conv:(1.54)
+ 91. famsup=yes 398 ==> paid=no 367    <conf:(0.92)> lift:(0.98) lev:(-0.01) [-7] conv:(0.75)
+ 92. school=GP higher=yes 391 ==> failures=0 360    <conf:(0.92)> lift:(1.09) lev:(0.05) [29] conv:(1.88)
+ 93. Dalc=1 451 ==> higher=yes 414    <conf:(0.92)> lift:(1.03) lev:(0.02) [10] conv:(1.26)
+ 94. romantic=no 410 ==> higher=yes 376    <conf:(0.92)> lift:(1.03) lev:(0.01) [9] conv:(1.25)
+ 95. paid=no Dalc=1 428 ==> higher=yes 392    <conf:(0.92)> lift:(1.02) lev:(0.01) [9] conv:(1.23)
+ 96. famsup=yes 398 ==> higher=yes 364    <conf:(0.91)> lift:(1.02) lev:(0.01) [8] conv:(1.21)
+ 97. G3='(9.5-14.25]' 418 ==> higher=yes 382    <conf:(0.91)> lift:(1.02) lev:(0.01) [8] conv:(1.2)
+ 98. paid=no higher=yes internet=yes 421 ==> failures=0 384    <conf:(0.91)> lift:(1.08) lev:(0.04) [27] conv:(1.71)
+ 99. Pstatus=T guardian=mother 392 ==> higher=yes 357    <conf:(0.91)> lift:(1.02) lev:(0.01) [6] conv:(1.16)
+100. paid=no G3='(9.5-14.25]' 392 ==> higher=yes 357    <conf:(0.91)> lift:(1.02) lev:(0.01) [6] conv:(1.16)
+
