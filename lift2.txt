@@ -1,0 +1,176 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 1 -C 2.0 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     student-por-comma-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R7,8-weka.filters.unsupervised.attribute.NumericToNominal-R13-weka.filters.unsupervised.attribute.NumericToNominal-R14,15-weka.filters.unsupervised.attribute.NumericToNominal-R24,25,26,27,28,29-weka.filters.unsupervised.attribute.Discretize-B12-M-1.0-R30-precision6-weka.filters.unsupervised.attribute.Remove-R31-32-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6
+Instances:    649
+Attributes:   31
+              school
+              sex
+              age
+              address
+              famsize
+              Pstatus
+              Medu
+              Fedu
+              Mjob
+              Fjob
+              reason
+              guardian
+              traveltime
+              studytime
+              failures
+              schoolsup
+              famsup
+              paid
+              activities
+              nursery
+              higher
+              internet
+              romantic
+              famrel
+              freetime
+              goout
+              Dalc
+              Walc
+              health
+              absences
+              G3
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (65 instances)
+Minimum metric <lift>: 2
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 84
+
+Size of set of large itemsets L(2): 1498
+
+Size of set of large itemsets L(3): 9876
+
+Size of set of large itemsets L(4): 32836
+
+Size of set of large itemsets L(5): 64836
+
+Size of set of large itemsets L(6): 82227
+
+Size of set of large itemsets L(7): 68015
+
+Size of set of large itemsets L(8): 35896
+
+Size of set of large itemsets L(9): 11614
+
+Size of set of large itemsets L(10): 2068
+
+Size of set of large itemsets L(11): 153
+
+Size of set of large itemsets L(12): 4
+
+Best rules found:
+
+  1. Mjob=teacher 72 ==> Medu=4 paid=no 65    conf:(0.9) < lift:(3.71)> lev:(0.07) [47] conv:(6.81)
+  2. Medu=4 paid=no 158 ==> Mjob=teacher 65    conf:(0.41) < lift:(3.71)> lev:(0.07) [47] conv:(1.49)
+  3. Mjob=teacher 72 ==> Medu=4 schoolsup=no 65    conf:(0.9) < lift:(3.68)> lev:(0.07) [47] conv:(6.8)
+  4. Medu=4 schoolsup=no 159 ==> Mjob=teacher 65    conf:(0.41) < lift:(3.68)> lev:(0.07) [47] conv:(1.49)
+  5. Mjob=teacher 72 ==> Medu=4 internet=yes 65    conf:(0.9) < lift:(3.68)> lev:(0.07) [47] conv:(6.8)
+  6. Medu=4 internet=yes 159 ==> Mjob=teacher 65    conf:(0.41) < lift:(3.68)> lev:(0.07) [47] conv:(1.49)
+  7. Mjob=teacher 72 ==> Medu=4 failures=0 68    conf:(0.94) < lift:(3.65)> lev:(0.08) [49] conv:(10.67)
+  8. Medu=4 failures=0 168 ==> Mjob=teacher 68    conf:(0.4) < lift:(3.65)> lev:(0.08) [49] conv:(1.48)
+  9. Medu=4 failures=0 168 ==> Mjob=teacher higher=yes 67    conf:(0.4) < lift:(3.65)> lev:(0.07) [48] conv:(1.47)
+ 10. Mjob=teacher higher=yes 71 ==> Medu=4 failures=0 67    conf:(0.94) < lift:(3.65)> lev:(0.07) [48] conv:(10.52)
+ 11. Medu=4 failures=0 higher=yes 166 ==> Mjob=teacher 67    conf:(0.4) < lift:(3.64)> lev:(0.07) [48] conv:(1.48)
+ 12. Mjob=teacher 72 ==> Medu=4 failures=0 higher=yes 67    conf:(0.93) < lift:(3.64)> lev:(0.07) [48] conv:(8.93)
+ 13. Medu=4 175 ==> Mjob=teacher 69    conf:(0.39) < lift:(3.55)> lev:(0.08) [49] conv:(1.45)
+ 14. Mjob=teacher 72 ==> Medu=4 69    conf:(0.96) < lift:(3.55)> lev:(0.08) [49] conv:(13.15)
+ 15. Medu=4 175 ==> Mjob=teacher failures=0 68    conf:(0.39) < lift:(3.55)> lev:(0.08) [48] conv:(1.44)
+ 16. Medu=4 175 ==> Mjob=teacher higher=yes 68    conf:(0.39) < lift:(3.55)> lev:(0.08) [48] conv:(1.44)
+ 17. Mjob=teacher failures=0 71 ==> Medu=4 68    conf:(0.96) < lift:(3.55)> lev:(0.08) [48] conv:(12.96)
+ 18. Mjob=teacher higher=yes 71 ==> Medu=4 68    conf:(0.96) < lift:(3.55)> lev:(0.08) [48] conv:(12.96)
+ 19. Medu=4 175 ==> Mjob=teacher failures=0 higher=yes 67    conf:(0.38) < lift:(3.55)> lev:(0.07) [48] conv:(1.43)
+ 20. Mjob=teacher failures=0 higher=yes 70 ==> Medu=4 67    conf:(0.96) < lift:(3.55)> lev:(0.07) [48] conv:(12.78)
+ 21. Medu=4 175 ==> Mjob=teacher schoolsup=no 65    conf:(0.37) < lift:(3.54)> lev:(0.07) [46] conv:(1.41)
+ 22. Medu=4 175 ==> Mjob=teacher paid=no 65    conf:(0.37) < lift:(3.54)> lev:(0.07) [46] conv:(1.41)
+ 23. Medu=4 175 ==> Mjob=teacher internet=yes 65    conf:(0.37) < lift:(3.54)> lev:(0.07) [46] conv:(1.41)
+ 24. Mjob=teacher schoolsup=no 68 ==> Medu=4 65    conf:(0.96) < lift:(3.54)> lev:(0.07) [46] conv:(12.42)
+ 25. Mjob=teacher paid=no 68 ==> Medu=4 65    conf:(0.96) < lift:(3.54)> lev:(0.07) [46] conv:(12.42)
+ 26. Mjob=teacher internet=yes 68 ==> Medu=4 65    conf:(0.96) < lift:(3.54)> lev:(0.07) [46] conv:(12.42)
+ 27. Mjob=teacher 72 ==> Medu=4 higher=yes 68    conf:(0.94) < lift:(3.54)> lev:(0.08) [48] conv:(10.56)
+ 28. Medu=4 higher=yes 173 ==> Mjob=teacher 68    conf:(0.39) < lift:(3.54)> lev:(0.08) [48] conv:(1.45)
+ 29. Medu=4 higher=yes 173 ==> Mjob=teacher failures=0 67    conf:(0.39) < lift:(3.54)> lev:(0.07) [48] conv:(1.44)
+ 30. Mjob=teacher failures=0 71 ==> Medu=4 higher=yes 67    conf:(0.94) < lift:(3.54)> lev:(0.07) [48] conv:(10.41)
+ 31. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 failures=0 internet=yes 68    conf:(0.43) < lift:(3.19)> lev:(0.07) [46] conv:(1.5)
+ 32. Pstatus=T Fedu=4 failures=0 internet=yes 87 ==> Medu=4 schoolsup=no 68    conf:(0.78) < lift:(3.19)> lev:(0.07) [46] conv:(3.28)
+ 33. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 failures=0 higher=yes internet=yes 66    conf:(0.42) < lift:(3.17)> lev:(0.07) [45] conv:(1.47)
+ 34. Pstatus=T Fedu=4 failures=0 higher=yes internet=yes 85 ==> Medu=4 schoolsup=no 66    conf:(0.78) < lift:(3.17)> lev:(0.07) [45] conv:(3.21)
+ 35. Medu=4 175 ==> Pstatus=T Fedu=4 failures=0 schoolsup=no internet=yes 68    conf:(0.39) < lift:(3.15)> lev:(0.07) [46] conv:(1.42)
+ 36. Pstatus=T Fedu=4 failures=0 schoolsup=no internet=yes 80 ==> Medu=4 68    conf:(0.85) < lift:(3.15)> lev:(0.07) [46] conv:(4.49)
+ 37. Pstatus=T Medu=4 154 ==> Fedu=4 failures=0 schoolsup=no internet=yes 68    conf:(0.44) < lift:(3.15)> lev:(0.07) [46] conv:(1.52)
+ 38. Fedu=4 failures=0 schoolsup=no internet=yes 91 ==> Pstatus=T Medu=4 68    conf:(0.75) < lift:(3.15)> lev:(0.07) [46] conv:(2.89)
+ 39. Medu=4 175 ==> Pstatus=T Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 66    conf:(0.38) < lift:(3.14)> lev:(0.07) [44] conv:(1.4)
+ 40. Pstatus=T Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 78 ==> Medu=4 66    conf:(0.85) < lift:(3.14)> lev:(0.07) [44] conv:(4.38)
+ 41. Medu=4 schoolsup=no higher=yes 157 ==> Pstatus=T Fedu=4 failures=0 internet=yes 66    conf:(0.42) < lift:(3.14)> lev:(0.07) [44] conv:(1.48)
+ 42. Pstatus=T Fedu=4 failures=0 internet=yes 87 ==> Medu=4 schoolsup=no higher=yes 66    conf:(0.76) < lift:(3.14)> lev:(0.07) [44] conv:(3)
+ 43. Pstatus=T Medu=4 schoolsup=no 141 ==> Fedu=4 failures=0 internet=yes 68    conf:(0.48) < lift:(3.13)> lev:(0.07) [46] conv:(1.61)
+ 44. Fedu=4 failures=0 internet=yes 100 ==> Pstatus=T Medu=4 schoolsup=no 68    conf:(0.68) < lift:(3.13)> lev:(0.07) [46] conv:(2.37)
+ 45. Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 89 ==> Pstatus=T Medu=4 66    conf:(0.74) < lift:(3.13)> lev:(0.07) [44] conv:(2.83)
+ 46. Pstatus=T Medu=4 154 ==> Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 66    conf:(0.43) < lift:(3.13)> lev:(0.07) [44] conv:(1.49)
+ 47. Pstatus=T Medu=4 schoolsup=no 141 ==> Fedu=4 failures=0 higher=yes internet=yes 66    conf:(0.47) < lift:(3.1)> lev:(0.07) [44] conv:(1.58)
+ 48. Fedu=4 failures=0 higher=yes internet=yes 98 ==> Pstatus=T Medu=4 schoolsup=no 66    conf:(0.67) < lift:(3.1)> lev:(0.07) [44] conv:(2.32)
+ 49. Pstatus=T Medu=4 higher=yes 152 ==> Fedu=4 failures=0 schoolsup=no internet=yes 66    conf:(0.43) < lift:(3.1)> lev:(0.07) [44] conv:(1.5)
+ 50. Fedu=4 failures=0 schoolsup=no internet=yes 91 ==> Pstatus=T Medu=4 higher=yes 66    conf:(0.73) < lift:(3.1)> lev:(0.07) [44] conv:(2.68)
+ 51. Medu=4 higher=yes 173 ==> Pstatus=T Fedu=4 failures=0 schoolsup=no internet=yes 66    conf:(0.38) < lift:(3.09)> lev:(0.07) [44] conv:(1.4)
+ 52. Pstatus=T Fedu=4 failures=0 schoolsup=no internet=yes 80 ==> Medu=4 higher=yes 66    conf:(0.82) < lift:(3.09)> lev:(0.07) [44] conv:(3.91)
+ 53. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 internet=yes 72    conf:(0.45) < lift:(3.09)> lev:(0.08) [48] conv:(1.54)
+ 54. Pstatus=T Fedu=4 internet=yes 95 ==> Medu=4 schoolsup=no 72    conf:(0.76) < lift:(3.09)> lev:(0.08) [48] conv:(2.99)
+ 55. Fedu=4 failures=0 117 ==> Medu=4 famsup=yes 68    conf:(0.58) < lift:(3.09)> lev:(0.07) [46] conv:(1.9)
+ 56. Medu=4 famsup=yes 122 ==> Fedu=4 failures=0 68    conf:(0.56) < lift:(3.09)> lev:(0.07) [46] conv:(1.82)
+ 57. Fedu=4 failures=0 internet=yes 100 ==> Pstatus=T Medu=4 schoolsup=no higher=yes 66    conf:(0.66) < lift:(3.08)> lev:(0.07) [44] conv:(2.25)
+ 58. Pstatus=T Medu=4 schoolsup=no higher=yes 139 ==> Fedu=4 failures=0 internet=yes 66    conf:(0.47) < lift:(3.08)> lev:(0.07) [44] conv:(1.59)
+ 59. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 higher=yes internet=yes 70    conf:(0.44) < lift:(3.07)> lev:(0.07) [47] conv:(1.51)
+ 60. Pstatus=T Fedu=4 higher=yes internet=yes 93 ==> Medu=4 schoolsup=no 70    conf:(0.75) < lift:(3.07)> lev:(0.07) [47] conv:(2.93)
+ 61. Medu=4 175 ==> Pstatus=T Fedu=4 failures=0 internet=yes 72    conf:(0.41) < lift:(3.07)> lev:(0.07) [48] conv:(1.46)
+ 62. Medu=4 175 ==> Pstatus=T Fedu=4 schoolsup=no internet=yes 72    conf:(0.41) < lift:(3.07)> lev:(0.07) [48] conv:(1.46)
+ 63. Pstatus=T Fedu=4 failures=0 internet=yes 87 ==> Medu=4 72    conf:(0.83) < lift:(3.07)> lev:(0.07) [48] conv:(3.97)
+ 64. Pstatus=T Fedu=4 schoolsup=no internet=yes 87 ==> Medu=4 72    conf:(0.83) < lift:(3.07)> lev:(0.07) [48] conv:(3.97)
+ 65. Medu=4 schoolsup=no 159 ==> Fedu=4 failures=0 internet=yes 75    conf:(0.47) < lift:(3.06)> lev:(0.08) [50] conv:(1.58)
+ 66. Fedu=4 failures=0 internet=yes 100 ==> Medu=4 schoolsup=no 75    conf:(0.75) < lift:(3.06)> lev:(0.08) [50] conv:(2.9)
+ 67. Medu=4 175 ==> Fedu=4 failures=0 schoolsup=no internet=yes 75    conf:(0.43) < lift:(3.06)> lev:(0.08) [50] conv:(1.49)
+ 68. Fedu=4 failures=0 schoolsup=no internet=yes 91 ==> Medu=4 75    conf:(0.82) < lift:(3.06)> lev:(0.08) [50] conv:(3.91)
+ 69. Medu=4 175 ==> Pstatus=T Fedu=4 failures=0 higher=yes internet=yes 70    conf:(0.4) < lift:(3.05)> lev:(0.07) [47] conv:(1.43)
+ 70. Medu=4 175 ==> Pstatus=T Fedu=4 schoolsup=no higher=yes internet=yes 70    conf:(0.4) < lift:(3.05)> lev:(0.07) [47] conv:(1.43)
+ 71. Pstatus=T Fedu=4 failures=0 higher=yes internet=yes 85 ==> Medu=4 70    conf:(0.82) < lift:(3.05)> lev:(0.07) [47] conv:(3.88)
+ 72. Pstatus=T Fedu=4 schoolsup=no higher=yes internet=yes 85 ==> Medu=4 70    conf:(0.82) < lift:(3.05)> lev:(0.07) [47] conv:(3.88)
+ 73. Medu=4 famsup=yes 122 ==> Fedu=4 failures=0 higher=yes 66    conf:(0.54) < lift:(3.05)> lev:(0.07) [44] conv:(1.76)
+ 74. Fedu=4 failures=0 higher=yes 115 ==> Medu=4 famsup=yes 66    conf:(0.57) < lift:(3.05)> lev:(0.07) [44] conv:(1.87)
+ 75. Fedu=4 failures=0 117 ==> Medu=4 famsup=yes higher=yes 66    conf:(0.56) < lift:(3.05)> lev:(0.07) [44] conv:(1.83)
+ 76. Medu=4 famsup=yes higher=yes 120 ==> Fedu=4 failures=0 66    conf:(0.55) < lift:(3.05)> lev:(0.07) [44] conv:(1.79)
+ 77. Pstatus=T Fedu=4 failures=0 schoolsup=no 91 ==> Medu=4 internet=yes 68    conf:(0.75) < lift:(3.05)> lev:(0.07) [45] conv:(2.86)
+ 78. Medu=4 internet=yes 159 ==> Pstatus=T Fedu=4 failures=0 schoolsup=no 68    conf:(0.43) < lift:(3.05)> lev:(0.07) [45] conv:(1.49)
+ 79. Medu=4 schoolsup=no higher=yes 157 ==> Pstatus=T Fedu=4 internet=yes 70    conf:(0.45) < lift:(3.05)> lev:(0.07) [47] conv:(1.52)
+ 80. Pstatus=T Fedu=4 internet=yes 95 ==> Medu=4 schoolsup=no higher=yes 70    conf:(0.74) < lift:(3.05)> lev:(0.07) [47] conv:(2.77)
+ 81. Medu=4 175 ==> Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 73    conf:(0.42) < lift:(3.04)> lev:(0.08) [49] conv:(1.47)
+ 82. Fedu=4 failures=0 schoolsup=no higher=yes internet=yes 89 ==> Medu=4 73    conf:(0.82) < lift:(3.04)> lev:(0.08) [49] conv:(3.82)
+ 83. Fedu=4 failures=0 higher=yes internet=yes 98 ==> Medu=4 schoolsup=no 73    conf:(0.74) < lift:(3.04)> lev:(0.08) [48] conv:(2.85)
+ 84. Medu=4 schoolsup=no 159 ==> Fedu=4 failures=0 higher=yes internet=yes 73    conf:(0.46) < lift:(3.04)> lev:(0.08) [48] conv:(1.55)
+ 85. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 nursery=yes 67    conf:(0.42) < lift:(3.04)> lev:(0.07) [44] conv:(1.47)
+ 86. Pstatus=T Fedu=4 nursery=yes 90 ==> Medu=4 schoolsup=no 67    conf:(0.74) < lift:(3.04)> lev:(0.07) [44] conv:(2.83)
+ 87. Medu=4 failures=0 schoolsup=no 153 ==> Pstatus=T Fedu=4 internet=yes 68    conf:(0.44) < lift:(3.04)> lev:(0.07) [45] conv:(1.52)
+ 88. Pstatus=T Fedu=4 internet=yes 95 ==> Medu=4 failures=0 schoolsup=no 68    conf:(0.72) < lift:(3.04)> lev:(0.07) [45] conv:(2.59)
+ 89. Pstatus=T Medu=4 154 ==> Fedu=4 failures=0 internet=yes 72    conf:(0.47) < lift:(3.03)> lev:(0.07) [48] conv:(1.57)
+ 90. Fedu=4 failures=0 internet=yes 100 ==> Pstatus=T Medu=4 72    conf:(0.72) < lift:(3.03)> lev:(0.07) [48] conv:(2.63)
+ 91. Medu=4 175 ==> address=U Pstatus=T Fedu=4 67    conf:(0.38) < lift:(3.03)> lev:(0.07) [44] conv:(1.4)
+ 92. Medu=4 175 ==> Pstatus=T Fedu=4 schoolsup=no nursery=yes 67    conf:(0.38) < lift:(3.03)> lev:(0.07) [44] conv:(1.4)
+ 93. address=U Pstatus=T Fedu=4 82 ==> Medu=4 67    conf:(0.82) < lift:(3.03)> lev:(0.07) [44] conv:(3.74)
+ 94. Pstatus=T Fedu=4 schoolsup=no nursery=yes 82 ==> Medu=4 67    conf:(0.82) < lift:(3.03)> lev:(0.07) [44] conv:(3.74)
+ 95. Pstatus=T Fedu=4 failures=0 schoolsup=no higher=yes 89 ==> Medu=4 internet=yes 66    conf:(0.74) < lift:(3.03)> lev:(0.07) [44] conv:(2.8)
+ 96. Medu=4 internet=yes 159 ==> Pstatus=T Fedu=4 failures=0 schoolsup=no higher=yes 66    conf:(0.42) < lift:(3.03)> lev:(0.07) [44] conv:(1.46)
+ 97. Pstatus=T Fedu=4 failures=0 100 ==> Medu=4 schoolsup=no internet=yes 68    conf:(0.68) < lift:(3.02)> lev:(0.07) [45] conv:(2.35)
+ 98. Medu=4 schoolsup=no internet=yes 146 ==> Pstatus=T Fedu=4 failures=0 68    conf:(0.47) < lift:(3.02)> lev:(0.07) [45] conv:(1.56)
+ 99. Medu=4 schoolsup=no 159 ==> Pstatus=T Fedu=4 failures=0 74    conf:(0.47) < lift:(3.02)> lev:(0.08) [49] conv:(1.56)
+100. Pstatus=T Fedu=4 failures=0 100 ==> Medu=4 schoolsup=no 74    conf:(0.74) < lift:(3.02)> lev:(0.08) [49] conv:(2.8)
+
