@@ -1,0 +1,160 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -c 21
+Relation:     student-por-comma-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R7,8-weka.filters.unsupervised.attribute.NumericToNominal-R13-weka.filters.unsupervised.attribute.NumericToNominal-R14,15-weka.filters.unsupervised.attribute.NumericToNominal-R24,25,26,27,28,29-weka.filters.unsupervised.attribute.Discretize-B12-M-1.0-R30-precision6-weka.filters.unsupervised.attribute.Remove-R31-32-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R31-precision6
+Instances:    649
+Attributes:   31
+              school
+              sex
+              age
+              address
+              famsize
+              Pstatus
+              Medu
+              Fedu
+              Mjob
+              Fjob
+              reason
+              guardian
+              traveltime
+              studytime
+              failures
+              schoolsup
+              famsup
+              paid
+              activities
+              nursery
+              higher
+              internet
+              romantic
+              famrel
+              freetime
+              goout
+              Dalc
+              Walc
+              health
+              absences
+              G3
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.5 (324 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 10
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 18
+
+Size of set of large itemsets L(2): 50
+
+Size of set of large itemsets L(3): 40
+
+Size of set of large itemsets L(4): 7
+
+Best rules found:
+
+  1. school=GP failures=0 paid=no 356 ==> higher=yes 341    conf:(0.96)
+  2. school=GP failures=0 376 ==> higher=yes 360    conf:(0.96)
+  3. Pstatus=T failures=0 Dalc=1 341 ==> higher=yes 325    conf:(0.95)
+  4. failures=0 romantic=no 356 ==> higher=yes 339    conf:(0.95)
+  5. failures=0 internet=yes 428 ==> higher=yes 407    conf:(0.95)
+  6. failures=0 paid=no internet=yes 404 ==> higher=yes 384    conf:(0.95)
+  7. Pstatus=T failures=0 internet=yes 378 ==> higher=yes 359    conf:(0.95)
+  8. Pstatus=T failures=0 paid=no internet=yes 357 ==> higher=yes 339    conf:(0.95)
+  9. address=U failures=0 392 ==> higher=yes 372    conf:(0.95)
+ 10. failures=0 nursery=yes internet=yes 348 ==> higher=yes 330    conf:(0.95)
+ 11. address=U failures=0 paid=no 374 ==> higher=yes 354    conf:(0.95)
+ 12. failures=0 Dalc=1 392 ==> higher=yes 371    conf:(0.95)
+ 13. failures=0 paid=no Dalc=1 373 ==> higher=yes 353    conf:(0.95)
+ 14. failures=0 schoolsup=no internet=yes 386 ==> higher=yes 365    conf:(0.95)
+ 15. failures=0 schoolsup=no paid=no internet=yes 366 ==> higher=yes 346    conf:(0.95)
+ 16. address=U failures=0 schoolsup=no 349 ==> higher=yes 329    conf:(0.94)
+ 17. guardian=mother failures=0 394 ==> higher=yes 371    conf:(0.94)
+ 18. failures=0 G3='(9.5-14.25]' 369 ==> higher=yes 347    conf:(0.94)
+ 19. failures=0 schoolsup=no Dalc=1 349 ==> higher=yes 328    conf:(0.94)
+ 20. failures=0 paid=no G3='(9.5-14.25]' 349 ==> higher=yes 328    conf:(0.94)
+ 21. famsize=GT3 failures=0 379 ==> higher=yes 356    conf:(0.94)
+ 22. famsize=GT3 failures=0 paid=no 356 ==> higher=yes 334    conf:(0.94)
+ 23. guardian=mother failures=0 paid=no 371 ==> higher=yes 348    conf:(0.94)
+ 24. Pstatus=T failures=0 481 ==> higher=yes 451    conf:(0.94)
+ 25. famsize=GT3 Pstatus=T failures=0 352 ==> higher=yes 330    conf:(0.94)
+ 26. Pstatus=T failures=0 paid=no 456 ==> higher=yes 427    conf:(0.94)
+ 27. guardian=mother failures=0 schoolsup=no 352 ==> higher=yes 329    conf:(0.93)
+ 28. failures=0 paid=no 520 ==> higher=yes 486    conf:(0.93)
+ 29. failures=0 549 ==> higher=yes 513    conf:(0.93)
+ 30. failures=0 paid=no nursery=yes 420 ==> higher=yes 392    conf:(0.93)
+ 31. Pstatus=T failures=0 nursery=yes 387 ==> higher=yes 361    conf:(0.93)
+ 32. failures=0 nursery=yes 445 ==> higher=yes 415    conf:(0.93)
+ 33. Pstatus=T failures=0 paid=no nursery=yes 366 ==> higher=yes 341    conf:(0.93)
+ 34. Pstatus=T failures=0 schoolsup=no 432 ==> higher=yes 402    conf:(0.93)
+ 35. Pstatus=T failures=0 schoolsup=no paid=no 411 ==> higher=yes 382    conf:(0.93)
+ 36. failures=0 schoolsup=no paid=no 468 ==> higher=yes 434    conf:(0.93)
+ 37. nursery=yes Dalc=1 370 ==> higher=yes 343    conf:(0.93)
+ 38. failures=0 schoolsup=no 491 ==> higher=yes 455    conf:(0.93)
+ 39. failures=0 schoolsup=no paid=no nursery=yes 378 ==> higher=yes 350    conf:(0.93)
+ 40. paid=no nursery=yes Dalc=1 351 ==> higher=yes 325    conf:(0.93)
+ 41. Pstatus=T Dalc=1 389 ==> higher=yes 360    conf:(0.93)
+ 42. failures=0 schoolsup=no nursery=yes 398 ==> higher=yes 368    conf:(0.92)
+ 43. school=GP paid=no 397 ==> higher=yes 367    conf:(0.92)
+ 44. school=GP 423 ==> higher=yes 391    conf:(0.92)
+ 45. school=GP internet=yes 356 ==> higher=yes 329    conf:(0.92)
+ 46. Pstatus=T paid=no Dalc=1 369 ==> higher=yes 341    conf:(0.92)
+ 47. school=GP Pstatus=T 368 ==> higher=yes 340    conf:(0.92)
+ 48. traveltime=1 366 ==> higher=yes 337    conf:(0.92)
+ 49. Pstatus=T romantic=no 365 ==> higher=yes 336    conf:(0.92)
+ 50. address=U internet=yes 369 ==> higher=yes 339    conf:(0.92)
+ 51. school=GP schoolsup=no 367 ==> higher=yes 337    conf:(0.92)
+ 52. Pstatus=T G3='(9.5-14.25]' 367 ==> higher=yes 337    conf:(0.92)
+ 53. absences='(-inf-2.666667]' 366 ==> higher=yes 336    conf:(0.92)
+ 54. Dalc=1 451 ==> higher=yes 414    conf:(0.92)
+ 55. address=U nursery=yes 365 ==> higher=yes 335    conf:(0.92)
+ 56. guardian=mother nursery=yes 374 ==> higher=yes 343    conf:(0.92)
+ 57. romantic=no 410 ==> higher=yes 376    conf:(0.92)
+ 58. paid=no Dalc=1 428 ==> higher=yes 392    conf:(0.92)
+ 59. famsup=yes 398 ==> higher=yes 364    conf:(0.91)
+ 60. paid=no romantic=no 384 ==> higher=yes 351    conf:(0.91)
+ 61. G3='(9.5-14.25]' 418 ==> higher=yes 382    conf:(0.91)
+ 62. famsup=yes paid=no 367 ==> higher=yes 335    conf:(0.91)
+ 63. Pstatus=T guardian=mother 392 ==> higher=yes 357    conf:(0.91)
+ 64. paid=no G3='(9.5-14.25]' 392 ==> higher=yes 357    conf:(0.91)
+ 65. schoolsup=no romantic=no 358 ==> higher=yes 326    conf:(0.91)
+ 66. schoolsup=no Dalc=1 400 ==> higher=yes 364    conf:(0.91)
+ 67. guardian=mother 455 ==> higher=yes 414    conf:(0.91)
+ 68. sex=F paid=no 366 ==> higher=yes 333    conf:(0.91)
+ 69. nursery=yes internet=yes 399 ==> higher=yes 363    conf:(0.91)
+ 70. address=U Pstatus=T 387 ==> higher=yes 352    conf:(0.91)
+ 71. address=U 452 ==> higher=yes 411    conf:(0.91)
+ 72. paid=no nursery=yes internet=yes 373 ==> higher=yes 339    conf:(0.91)
+ 73. sex=F 383 ==> higher=yes 348    conf:(0.91)
+ 74. schoolsup=no paid=no Dalc=1 383 ==> higher=yes 348    conf:(0.91)
+ 75. Pstatus=T guardian=mother paid=no 365 ==> higher=yes 331    conf:(0.91)
+ 76. guardian=mother paid=no 425 ==> higher=yes 385    conf:(0.91)
+ 77. internet=yes 498 ==> higher=yes 451    conf:(0.91)
+ 78. schoolsup=no G3='(9.5-14.25]' 360 ==> higher=yes 326    conf:(0.91)
+ 79. schoolsup=no nursery=yes internet=yes 359 ==> higher=yes 325    conf:(0.91)
+ 80. address=U Pstatus=T paid=no 365 ==> higher=yes 330    conf:(0.9)
+ 81. address=U paid=no 427 ==> higher=yes 386    conf:(0.9)
+ 82. paid=no internet=yes 466 ==> higher=yes 421    conf:(0.9)
+ 83. Pstatus=T internet=yes 442 ==> higher=yes 399    conf:(0.9)
+ 84. guardian=mother schoolsup=no 409 ==> higher=yes 369    conf:(0.9)
+ 85. address=U schoolsup=no 403 ==> higher=yes 363    conf:(0.9)
+ 86. Pstatus=T paid=no internet=yes 413 ==> higher=yes 372    conf:(0.9)
+ 87. nursery=yes 521 ==> higher=yes 469    conf:(0.9)
+ 88. paid=no nursery=yes 488 ==> higher=yes 439    conf:(0.9)
+ 89. schoolsup=no internet=yes 448 ==> higher=yes 403    conf:(0.9)
+ 90. guardian=mother schoolsup=no paid=no 385 ==> higher=yes 346    conf:(0.9)
+ 91. Pstatus=T nursery=yes 454 ==> higher=yes 408    conf:(0.9)
+ 92. schoolsup=no paid=no internet=yes 420 ==> higher=yes 377    conf:(0.9)
+ 93. Pstatus=T schoolsup=no internet=yes 398 ==> higher=yes 357    conf:(0.9)
+ 94. Pstatus=T paid=no nursery=yes 425 ==> higher=yes 381    conf:(0.9)
+ 95. Pstatus=T 569 ==> higher=yes 510    conf:(0.9)
+ 96. Pstatus=T schoolsup=no paid=no internet=yes 371 ==> higher=yes 332    conf:(0.89)
+ 97. address=U schoolsup=no paid=no 380 ==> higher=yes 340    conf:(0.89)
+ 98. Pstatus=T paid=no 534 ==> higher=yes 477    conf:(0.89)
+ 99. famsize=GT3 457 ==> higher=yes 408    conf:(0.89)
+100. schoolsup=no nursery=yes 465 ==> higher=yes 415    conf:(0.89)
+
